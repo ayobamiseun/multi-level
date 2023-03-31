@@ -1,0 +1,120 @@
+.plan {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 6.5rem 4rem 9rem;
+    gap: 40px;
+    opacity: 0;
+}
+.plan-plans {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+.plan-plans > div {
+    width: 220px;
+    border: 1px solid #d6d9e6;
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.plan-plans > div img {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+.plan-plans > div > div p {
+    font-size: 22px;
+    font-weight: 500;
+    color: #02295a;
+    margin-bottom: 5px;
+}
+.plan-plans > div > div span {
+    font-size: 20px;
+    font-weight: 400;
+    color: #9699ab;
+}
+.plan-plans > div > div b {
+    font-weight: 500;
+    display: block;
+    color: #02295a;
+    margin-top: 8px;
+}
+.plan-plans > div:hover {
+    border: 1px solid #473dff;
+}
+.plan-plans > div[data-selected="true"] {
+    background-color: rgba(71, 61, 255, 0.03);
+    border: 1px solid #473dff;
+}
+.plan-switch {
+    background-color: rgba(173, 190, 255, 0.15);
+    border-radius: 8px;
+    width: 100%;
+    height: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.plan-switch span {
+    font-size: 18px;
+    font-weight: 700;
+}
+.plan-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 1024px) {
+    .plan {
+        padding: 4rem 2rem;
+        margin-top: -40px;
+   }
+    .plan-plans {
+        flex-direction: column;
+   }
+    .plan-plans > div {
+        flex-direction: row;
+        width: 100%;
+        max-height: 120px;
+        align-items: center;
+        gap: 25px;
+   }
+    .plan-plans > div > div {
+        flex: 1;
+   }
+    .plan-buttons {
+        position: absolute;
+        bottom: 20px;
+        left: 5%;
+        width: 90%;
+   }
+}
+
+@media (max-width: 900px) {
+    .plan-buttons {
+        display: none
+    }
+    
+}
+
+@media (min-width: 900px) {
+    #plan-mobile {
+        display:none;
+        background: red;
+        height: 400px;
+    }
+}
+@media (max-width: 900px) {
+    #plan-desktop {
+        display:none;
+        background: red;
+        height: 400px;
+    }
+}
